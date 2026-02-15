@@ -179,3 +179,54 @@ left join department d
 on s.department_id = d.department_id
 where d.department_name = 'Mathematics'
 and a.city = 'Chicago'
+
+-- 21
+SELECT s.*
+FROM Student s
+JOIN Address a ON s.address_id = a.address_id
+WHERE a.city IN ('Urbana', 'Peoria');
+
+-- 22
+SELECT *
+FROM Student
+ORDER BY student_id DESC
+LIMIT 1;
+
+-- 23
+SELECT s.*
+FROM Student s
+JOIN Department d ON s.department_id = d.department_id
+WHERE d.department_name <> 'Computer Science';
+
+-- 24
+SELECT COUNT(*)
+FROM Address
+WHERE city = 'Champaign';
+
+-- 25
+SELECT s.first_name, s.last_name
+FROM Student s
+JOIN Address a ON s.address_id = a.address_id
+WHERE a.street_address = '520 Pine Rd';
+
+-- 26
+SELECT AVG(EXTRACT(YEAR FROM AGE(CURRENT_DATE, s.birthdate))) AS average_age
+FROM Student s
+JOIN Department d ON s.department_id = d.department_id
+WHERE d.department_name = 'Electrical Engineering';
+
+-- 27
+SELECT s.first_name, s.last_name, d.department_name, a.city
+FROM Student s
+JOIN Department d ON s.department_id = d.department_id
+JOIN Address a ON s.address_id = a.address_id
+WHERE d.department_name LIKE 'M%';
+
+-- 28
+DELETE FROM Student
+WHERE department_id = (
+    SELECT department_id
+    FROM Department
+    WHERE department_name = 'Mechanical Engineering'
+)
+LIMIT 1;
