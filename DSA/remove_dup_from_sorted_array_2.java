@@ -1,5 +1,5 @@
 //here we need to remove duplicates after it occurs twice in the array
-class Solution {
+class remove_dup_from_sorted_array_2 {
     public int removeDuplicates(int[] nums) {
         int k=2;
         int n = nums.length;

@@ -1,5 +1,5 @@
 //remove all duplicate elements in place
-class Solution {
+class remove_dup_from_sorted_array {
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0; 
 

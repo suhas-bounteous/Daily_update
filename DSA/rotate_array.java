@@ -1,5 +1,5 @@
 //rotate the array without any extra space, this approach is the most optimal as it does not use any extra space
-class Solution {
+class rotate_array {
     public void rotate(int[] nums, int k) {
         int n = nums.length;
         k %= n;

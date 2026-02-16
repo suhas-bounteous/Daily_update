@@ -1,4 +1,4 @@
-class Solution {
+class jump_game {
     public boolean canJump(int[] nums) {
         int goal = nums.length - 1;
 

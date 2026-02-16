@@ -1,5 +1,5 @@
 //calculate the best time to buy and sell stocks
-class Solution {
+class best_time_to_buy_sell_stocks {
     public int maxProfit(int[] nums) {
         int lp = 0;
         int p=0;

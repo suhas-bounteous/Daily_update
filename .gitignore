@@ -1,5 +1,7 @@
 # Ignore all compiled files
 *.class
+.idea/
+.out/
 
 # Ignore Log files
 *.log

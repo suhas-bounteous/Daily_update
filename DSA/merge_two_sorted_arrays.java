@@ -1,6 +1,6 @@
 //this question asks to sort 2 sorted arrays with space constraints
 
-class Solution {
+class merge_two_sorted_arrays {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int l=m+n-1;
         int p = m-1;
