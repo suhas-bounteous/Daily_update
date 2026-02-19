@@ -30,9 +30,7 @@ public class frog_jump_1 {
 
         return solve(n - 1, height, dp);
     }
-}
 
-class Main {
     public static void main(String[] args) {
 
         int[] height = { 30, 10, 60, 10, 60, 50 };
