@@ -45,6 +45,9 @@ class EmployeeSoln{
                         .collect(Collectors.partitioningBy(n -> n % 2 == 0));
         System.out.println("6. " + evenOdd);
 
+        //7
+//        List<String> salgr50 = employees.stream().filter()
+
 
 
 
