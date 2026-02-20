@@ -1,5 +1,6 @@
-import java.util.stream.*;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 class Streams {
     public static void main(String[] args) {
@@ -9,7 +10,8 @@ class Streams {
                 .filter(x -> x % 2 == 0)
                 .forEach(System.out::println);
 
-        long c = IntStream.range(1, 1000000)
+        long c;
+        c = IntStream.range(1, 1000000)
                 .parallel()
                 .filter(MyClass::isPrime)
                 .count();
