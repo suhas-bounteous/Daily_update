@@ -1,5 +1,5 @@
 //Question 1
-public class Generics<T> {
+public class Generics_1<T> {
     private T values;
 
     public void set(T values){

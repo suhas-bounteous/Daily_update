@@ -1,4 +1,4 @@
-public class staticGenerics {
+public class staticGenerics_1 {
 
     public static class Container<T> {
         private final T value;

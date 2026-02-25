@@ -1,5 +1,5 @@
 import java.util.*;
-class CopyFromSrc<T>{
+class CopyFromSrc_1<T>{
     public static <T> void copy(List<? super T> destination, List<? extends T> source) {
         destination.addAll(source);
     }

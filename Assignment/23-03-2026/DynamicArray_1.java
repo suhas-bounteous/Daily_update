@@ -1,9 +1,9 @@
-class DynamicArray<T>{
+class DynamicArray_1<T>{
     private int size;
     private static final int max = 10;
     private Object[] data;
 
-    public DynamicArray(){
+    public DynamicArray_1(){
         data = new Object[max];
         size = 0;
     }
@@ -44,7 +44,7 @@ class DynamicArray<T>{
     }
     public static void main(String[] args) {
 
-        DynamicArray<String> list = new DynamicArray<>();
+        DynamicArray_1<String> list = new DynamicArray_1<>();
 
         list.push("Apple");
         list.push("Banana");
