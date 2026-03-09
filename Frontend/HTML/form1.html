@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        
+        <label for="passowrd">Password</label>
+        <input type="password" name="passowrd" id="passowrd">
+        <br>
+
+        <fieldset>
+            <legend>Select Gender:</legend>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+          </fieldset>
+        
+          <br>
+        
+          <label for="city">Choose a city:</label>
+          <select id="city" name="city">
+            <option value="ny">New York</option>
+            <option value="ldn">London</option>
+            <option value="tky">Tokyo</option>
+          </select>
+        
+          <br><br>
+        
+          <label for="hobbies">Select your hobbies:</label><br>
+          <select id="hobbies" name="hobbies" multiple size="4">
+            <option value="coding">Coding</option>
+            <option value="music">Music</option>
+            <option value="travel">Travel</option>
+            <option value="sports">Sports</option>
+          </select>
+    </form>
+</body>
+</html>
