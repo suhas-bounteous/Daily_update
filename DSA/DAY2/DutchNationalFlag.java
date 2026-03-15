@@ -25,7 +25,7 @@ public class DutchNationalFlag {
                 mid++;
             }
 
-            else { l
+            else { 
                 int temp = arr[mid];
                 arr[mid] = arr[high];
                 arr[high] = temp;
