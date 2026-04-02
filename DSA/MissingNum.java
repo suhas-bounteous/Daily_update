@@ -20,8 +20,9 @@ class MissingNum {
         int n = sc.nextInt();
         int[] nums = new int[n];
         System.out.println("Enter the elements of the array (0 to " + n + " with one missing):");
-        for (int i = 0; i < n; i++) {
-            nums[i] = sc.nextInt();
+        for (int j = 0; j < n; j++) {
+            nums[j] = sc.nextInt();
         }
     }
 }
+
