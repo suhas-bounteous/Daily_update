@@ -28,5 +28,19 @@ public class SkylineProblem {
         return res.substring(0, end + 1);
     }
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the encoded text: ");
+        String encodedText = scanner.nextLine();
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        SkylineProblem solution = new SkylineProblem();
+        String decodedText = solution.decodeCiphertext(encodedText, rows);
+        System.out.println("Decoded text: " + decodedText);
+
+        scanner.close();
+    }
+
 }
 
