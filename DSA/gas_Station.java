@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class gas_Station{
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int totalSurplus = 0; 
