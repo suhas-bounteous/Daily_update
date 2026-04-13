@@ -1,4 +1,3 @@
-package Daily_update.DSA;
 import java.util.*;
 class twoSum {
     public static int[] two_Sum(int[] nums, int target) {
