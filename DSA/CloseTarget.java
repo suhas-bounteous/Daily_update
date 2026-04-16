@@ -10,6 +10,8 @@ class CloseTarget {
     }
     public static void main(String[] args) {
         CloseTarget obj = new CloseTarget();
-        System.out.println(obj.closestTarget(args[0], args[1], null, 0));
+        String[] words = {"hello", "i", "am", "leetcode", "hello"};
+        String target = "hello";
+        System.out.println(obj.closestTarget(words, target, 1));
     }
 }
