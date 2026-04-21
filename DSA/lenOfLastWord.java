@@ -1,4 +1,3 @@
-package Daily_update.DSA;
 
 public class lenOfLastWord {
     public static int lengthOfLastWord(String s) {

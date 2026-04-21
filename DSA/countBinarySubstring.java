@@ -1,5 +1,3 @@
-package Daily_update.DSA;
-
 public class countBinarySubstring {
     public static int count_Binary_Substrings(String s) {
         int res = 0, prev = 0, strk = 1;

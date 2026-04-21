@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class NumberOfIslands {
     public int numIslands(char[][] grid) {
@@ -43,8 +42,25 @@ public class NumberOfIslands {
         dfs(grid, r, c + 1);
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
+    NumberOfIslands solution = new NumberOfIslands();
+
+        // Example 1
+        char[][] grid1 = {
+            {'1', '1', '1', '1', '0'},
+            {'1', '1', '0', '1', '0'},
+            {'1', '1', '0', '0', '0'},
+            {'0', '0', '0', '0', '0'}
+        };
+        System.out.println("Number of islands in Grid 1: " + solution.numIslands(grid1)); // Expected: 1
+
+        // Example 2
+        char[][] grid2 = {
+            {'1', '1', '0', '0', '0'},
+            {'1', '1', '0', '0', '0'},
+            {'0', '0', '1', '0', '0'},
+            {'0', '0', '0', '1', '1'}
+        };
+        System.out.println("Number of islands in Grid 2: " + solution.numIslands(grid2)); // Expected: 3
     }
 } 
 

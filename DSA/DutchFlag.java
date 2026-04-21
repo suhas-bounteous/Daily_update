@@ -1,5 +1,3 @@
-package Daily_update.DSA;
-import java.util.*;
 
 class GfG {
     static void sort012(int[] arr) {

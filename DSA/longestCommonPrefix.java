@@ -1,4 +1,3 @@
-package Daily_update.DSA;
 
 class longestCommonPrefix {
     public static String longest_Common_Prefix(String[] strs) {

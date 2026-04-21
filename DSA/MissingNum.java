@@ -23,6 +23,7 @@ class MissingNum {
         for (int j = 0; j < n; j++) {
             nums[j] = sc.nextInt();
         }
+        sc.close();
     }
 }
 

@@ -1,4 +1,4 @@
-public public class MaxSumSubarr {
+public class MaxSumSubarr {
 
     public static int findMaxSumSubarray(int k, int[] nums) {
         if (nums == null || nums.length < k) {

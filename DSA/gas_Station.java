@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 class gas_Station{
     public int canCompleteCircuit(int[] gas, int[] cost) {
@@ -17,5 +16,5 @@ class gas_Station{
             }
         }
         return (totalSurplus < 0) ? -1 : startStation;
-    }
+   }
 }

@@ -57,5 +57,7 @@ public class ATM {
             }
         }
 
+        sc.close();
+
     }
 }

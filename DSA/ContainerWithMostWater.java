@@ -1,5 +1,3 @@
-package Daily_update.DSA;
-
 public class ContainerWithMostWater {
     public int maxArea(int[] height) {
         int maxArea = 0;

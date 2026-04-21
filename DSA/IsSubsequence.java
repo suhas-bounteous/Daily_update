@@ -1,9 +1,7 @@
-package Daily_update.DSA;
 
 public class IsSubsequence {
     public static boolean check(String s, String t) {
         int a = 0;
-        int b=0;
         char[] tc = s.toCharArray();
         int sc= s.length();
         if(sc==0) return true;

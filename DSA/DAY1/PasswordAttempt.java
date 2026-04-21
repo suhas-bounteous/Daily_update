@@ -17,5 +17,6 @@ public class PasswordAttempt {
                 System.out.println("Access Denied");
             }
         }while(flag);
+        sc.close();
     }
 }

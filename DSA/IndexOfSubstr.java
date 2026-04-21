@@ -1,4 +1,3 @@
-package Daily_update.DSA;
 class IndexOfSubstr {
     public static int strStr(String haystack, String needle) {
         if(haystack.contains(needle)){
