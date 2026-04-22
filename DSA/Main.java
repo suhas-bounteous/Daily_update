@@ -1,30 +1,31 @@
+import java.util.*;
 
-class FruitInBasket {
-    
-    
+class Solution {
+    // Function to find the maximum number of fruits we can collect
+    // with at most two types of fruits in the baskets.
     public int totalFruit(int[] fruits) {
         
-        
+        // Variables to track max window size
         int maxlen = 0;
         
-        
+        // Track last and second last fruit types
         int lastFruit = -1, secondLastFruit = -1;
         
-        
+        // Count of current window and streak of last fruit
         int currCount = 0, lastFruitStreak = 0;
 
-        
+        // Traverse through each fruit
         for (int fruit : fruits) {
             
-            
+            // If fruit matches last two, expand window
             if (fruit == lastFruit || fruit == secondLastFruit) {
                 currCount++;
             } else {
-                
+                // Reset window size to streak + 1
                 currCount = lastFruitStreak + 1;
             }
 
-            
+            // Update lastFruit streak and fruit types
             if (fruit == lastFruit) {
                 lastFruitStreak++;
             } else {
@@ -33,7 +34,7 @@ class FruitInBasket {
                 lastFruit = fruit;
             }
 
-            
+            // Update max window size
             maxlen = Math.max(maxlen, currCount);
         }
 
@@ -41,10 +42,10 @@ class FruitInBasket {
     }
 }
 
-
+// Driver code
 class Main {
     public static void main(String[] args) {
-        FruitInBasket sol = new FruitInBasket();
+        Solution sol = new Solution();
         int[] fruits = {1,2,1,2,3};
         System.out.println(sol.totalFruit(fruits));
     }
