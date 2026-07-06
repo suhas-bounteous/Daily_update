@@ -1,52 +1,54 @@
 import java.util.*;
 
-class Solution {
-    // Function to find the maximum number of fruits we can collect
-    // with at most two types of fruits in the baskets.
-    public int totalFruit(int[] fruits) {
-        
-        // Variables to track max window size
-        int maxlen = 0;
-        
-        // Track last and second last fruit types
-        int lastFruit = -1, secondLastFruit = -1;
-        
-        // Count of current window and streak of last fruit
-        int currCount = 0, lastFruitStreak = 0;
+// AllPosSubSeq class to generate all subsequences using bit manipulation
+class AllPosSubSeq {
+    
+    public List<String> getSubsequences(String s) {
+        // Length of input string
+        int n = s.length();
 
-        // Traverse through each fruit
-        for (int fruit : fruits) {
-            
-            // If fruit matches last two, expand window
-            if (fruit == lastFruit || fruit == secondLastFruit) {
-                currCount++;
-            } else {
-                // Reset window size to streak + 1
-                currCount = lastFruitStreak + 1;
+        // Total subsequences = 2^n
+        int total = 1 << n;
+
+        // List to store all subsequences
+        List<String> subsequences = new ArrayList<>();
+
+        // Iterate over all bit masks from 0 to 2^n - 1
+        for (int mask = 0; mask < total; mask++) {
+            // Temporary subsequence builder
+            StringBuilder subseq = new StringBuilder();
+
+            // Check each bit position in mask
+            for (int i = 0; i < n; i++) {
+                // If i-th bit of mask is set, include s.charAt(i)
+                if ((mask & (1 << i)) != 0) {
+                    subseq.append(s.charAt(i));
+                }
             }
 
-            // Update lastFruit streak and fruit types
-            if (fruit == lastFruit) {
-                lastFruitStreak++;
-            } else {
-                lastFruitStreak = 1;
-                secondLastFruit = lastFruit;
-                lastFruit = fruit;
-            }
-
-            // Update max window size
-            maxlen = Math.max(maxlen, currCount);
+            // Store the formed subsequence as string
+            subsequences.add(subseq.toString());
         }
 
-        return maxlen;
+        // Return all generated subsequences
+        return subsequences;
     }
 }
 
-// Driver code
-class Main {
+public class Main {
     public static void main(String[] args) {
-        Solution sol = new Solution();
-        int[] fruits = {1,2,1,2,3};
-        System.out.println(sol.totalFruit(fruits));
+        // Input string
+        String s = "abc";
+
+        // Create AllPosSubSeq object
+        AllPosSubSeq sol = new AllPosSubSeq();
+
+        // Get all subsequences
+        List<String> subsequences = sol.getSubsequences(s);
+
+        // Print all subsequences
+        for (String subseq : subsequences) {
+            System.out.println("\"" + subseq + "\"");
+        }
     }
 }
