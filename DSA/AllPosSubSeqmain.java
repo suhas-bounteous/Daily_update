@@ -2,7 +2,7 @@ import java.util.*;
 
 // AllPosSubSeq class to generate all subsequences using bit manipulation
 class AllPosSubSeq {
-    
+
     public List<String> getSubsequences(String s) {
         // Length of input string
         int n = s.length();
@@ -35,7 +35,7 @@ class AllPosSubSeq {
     }
 }
 
-public class Main {
+public class AllPosSubSeqmain {
     public static void main(String[] args) {
         // Input string
         String s = "abc";
